@@ -1,0 +1,7 @@
+#!/bin/bash
+
+_HOST="$1"
+EXPIREDOMAIN=`whois $_HOST |grep expires | sed 's/ //g' |cut -d: -f2`
+#echo $EXPIREDOMAIN
+EXPIREDATE=$(date --date $EXPIREDOMAIN +%s)
+echo $EXPIREDATE
