@@ -1,7 +1,16 @@
 #!/bin/bash
 
+###################################################
+## Áruja, 04 de dezembro de 2018.                ##
+## Criado por Jairo Fernandes da Silva           ##
+## Administrador de Redes / SysAdmin             ##
+## +55 11 98219-4247 | jairofernandes@gmail.com  ##
+###################################################
+
 _HOST="$1"
 EXPIREDOMAIN=`whois $_HOST |grep expires | sed 's/ //g' |cut -d: -f2`
 #echo $EXPIREDOMAIN
 EXPIREDATE=$(date --date $EXPIREDOMAIN +%s)
 echo $EXPIREDATE
+
+# Este script depende do comando whois instalado no servidor Zabbix
