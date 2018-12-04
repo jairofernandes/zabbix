@@ -1,0 +1,2 @@
+# zabbix-scripts
+Scripts Zabbix
